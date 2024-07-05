@@ -4,11 +4,12 @@ import path from "path";
 
 export default defineConfig({
   server: {
+    // host: "0.0.0.0",
     proxy: {
-      "/proxy": {
+      "/api": {
         target: "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/proxy/, ""),
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
