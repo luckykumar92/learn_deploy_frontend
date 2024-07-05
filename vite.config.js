@@ -5,7 +5,11 @@ import path from "path";
 export default defineConfig({
   server: {
     proxy: {
-      "/api": "http://localhost:6501",
+      "/proxy": {
+        target: "http://localhost:6501",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/proxy/, ""),
+      },
     },
   },
   plugins: [react()],
