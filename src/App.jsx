@@ -12,7 +12,9 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("/api/v1/users/getuser")
+      .get(
+        "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/users/getuser"
+      )
       .then((userData) => {
         if (userData) {
           dispatch(login(userData.data.data));

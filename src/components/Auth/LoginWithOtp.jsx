@@ -37,15 +37,21 @@ const LoginWithOtp = () => {
       let loginAccount;
 
       if (phone) {
-        loginAccount = await axios.post("/api/v1/users/login-with-otp", {
-          verifyCode,
-          phone,
-        });
+        loginAccount = await axios.post(
+          "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/users/login-with-otp",
+          {
+            verifyCode,
+            phone,
+          }
+        );
       } else if (email) {
-        loginAccount = await axios.post("/api/v1/users/login-with-otp", {
-          verifyCode,
-          email,
-        });
+        loginAccount = await axios.post(
+          "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/users/login-with-otp",
+          {
+            verifyCode,
+            email,
+          }
+        );
       } else {
         throw new Error("Phone or email not found.");
       }

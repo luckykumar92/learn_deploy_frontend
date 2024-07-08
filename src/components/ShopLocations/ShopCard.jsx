@@ -9,7 +9,7 @@ const ShopCard = ({ shop }) => {
   const handleClick = async () => {
     try {
       const shopData = await axios.get(
-        `/api/v1/prints/shopdata?id=${shop._id}`
+        `https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/prints/shopdata?id=${shop._id}`
       );
       // console.log(shopData.data.data);
       if (shopData) {

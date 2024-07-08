@@ -14,7 +14,9 @@ const ShopLocations = () => {
   const [locationCardData, setLocationCardData] = useState({});
   useEffect(() => {
     axios
-      .get("/api/v1/prints/shopslocation")
+      .get(
+        "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/prints/shopslocation"
+      )
       .then((resData) => {
         setLocationCardData(resData.data.data);
       })

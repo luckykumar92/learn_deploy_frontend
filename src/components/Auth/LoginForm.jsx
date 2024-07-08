@@ -37,9 +37,14 @@ const LoginForm = () => {
     setLoading(true);
     setError("");
     try {
-      const session = await axios.post("/api/v1/users/login", data);
+      const session = await axios.post(
+        "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/users/login",
+        data
+      );
       if (session) {
-        const userData = await axios.get("/api/v1/users/getuser");
+        const userData = await axios.get(
+          "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/users/getuser"
+        );
         console.log(userData.data.data);
         if (userData) dispatch(authLogin(userData.data.data));
         setLoading(false);

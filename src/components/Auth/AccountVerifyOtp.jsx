@@ -31,10 +31,13 @@ const AccountVerifyOtp = () => {
       const phone = JSON.parse(sessionStorage.getItem("phone"));
       // console.log(phone);
 
-      const verifyAccount = await axios.post("/api/v1/users/verify-account", {
-        verifyCode,
-        phone,
-      });
+      const verifyAccount = await axios.post(
+        "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/users/verify-account",
+        {
+          verifyCode,
+          phone,
+        }
+      );
 
       if (verifyAccount) {
         setLoading(false);

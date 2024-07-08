@@ -16,7 +16,9 @@ const PrintNow = () => {
   // ---------- Fetch data from backend -------
   useEffect(() => {
     axios
-      .get(`/api/v1/prints/shopdata?id=${id}`)
+      .get(
+        `https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/prints/shopdata?id=${id}`
+      )
 
       .then((userData) => {
         setShopData(userData.data.data);
