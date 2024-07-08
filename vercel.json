@@ -1,5 +1,3 @@
 {
-  "rewrites": [
-    { "source": "/api/:match*", "destination": "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/:match*" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
