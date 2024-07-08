@@ -9,7 +9,7 @@ const ShopCard = ({ shop }) => {
   const handleClick = async () => {
     try {
       const shopData = await axios.get(
-        `https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/prints/shopdata?id=${shop._id}`
+        `https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/prints/shopdata?id=${shop._id}`
       );
       // console.log(shopData.data.data);
       if (shopData) {
@@ -26,8 +26,7 @@ const ShopCard = ({ shop }) => {
           className="bg-center bg-cover h-[200px] rounded-t-lg relative"
           style={{
             backgroundImage: `url(${shop.shopImage})`,
-          }}
-        >
+          }}>
           <div className="text-xs bg-[#3582ec] absolute bottom-[21%] py-[2px] pr-1 pl-5 rounded-r max-w-[60px] left-0 text-[#fff] font-bold">
             10% OFF<p className="font-[400]">Up to &#x20b9;100 </p>
           </div>

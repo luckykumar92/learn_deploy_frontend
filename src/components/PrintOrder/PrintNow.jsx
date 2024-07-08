@@ -17,7 +17,7 @@ const PrintNow = () => {
   useEffect(() => {
     axios
       .get(
-        `https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/prints/shopdata?id=${id}`
+        `https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/prints/shopdata?id=${id}`
       )
 
       .then((userData) => {

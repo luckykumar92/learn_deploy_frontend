@@ -32,7 +32,7 @@ const AccountVerifyOtp = () => {
       // console.log(phone);
 
       const verifyAccount = await axios.post(
-        "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/users/verify-account",
+        "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/verify-account",
         {
           verifyCode,
           phone,
@@ -56,8 +56,7 @@ const AccountVerifyOtp = () => {
       className="bg-[#023047] w-full "
       style={{
         backgroundImage: `url(${authBg})`,
-      }}
-    >
+      }}>
       <div className="bg-[#023047] bg-opacity-40 py-8  max-[640px]:py-0 w-full h-full flex items-center justify-center min-h-[80vh]">
         <Card className="flex-1 max-w-xl mx-auto max-[640px]:my-0 max-[640px]:rounded-none h-full w-full bg-[#023047] rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-60 border border-gray-100 my-auto">
           <div className="mx-auto flex justify-center my-4">
@@ -84,8 +83,7 @@ const AccountVerifyOtp = () => {
               <Button
                 type="submit"
                 className="w-[90%] mx-auto bg-[#023047] hover:bg-gray-300 hover:text-[#023047]"
-                onClick={handleSubmit}
-              >
+                onClick={handleSubmit}>
                 Confirm
               </Button>
             </div>

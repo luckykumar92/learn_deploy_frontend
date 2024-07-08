@@ -13,7 +13,7 @@ const App = () => {
   useEffect(() => {
     axios
       .get(
-        "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/users/getuser"
+        "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/getuser"
       )
       .then((userData) => {
         if (userData) {

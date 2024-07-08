@@ -38,12 +38,12 @@ const LoginForm = () => {
     setError("");
     try {
       const session = await axios.post(
-        "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/users/login",
+        "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/login",
         data
       );
       if (session) {
         const userData = await axios.get(
-          "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com/api/v1/users/getuser"
+          "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/getuser"
         );
         console.log(userData.data.data);
         if (userData) dispatch(authLogin(userData.data.data));
@@ -63,8 +63,7 @@ const LoginForm = () => {
       className=""
       style={{
         backgroundImage: `url(${authBg})`,
-      }}
-    >
+      }}>
       <div className="bg-[#023047] bg-opacity-40 py-8  max-[640px]:py-0 w-full h-full flex items-center justify-center">
         <Card className="flex-1 max-w-2xl mx-auto max-[640px]:my-0 max-[640px]:rounded-none h-full w-full bg-[#023047] rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-60 border border-gray-100">
           <CardHeader className="space-y-1 text-center">
@@ -125,8 +124,7 @@ const LoginForm = () => {
             <CardFooter>
               <Button
                 type="submit"
-                className="w-[90%] mx-auto bg-[#023047] hover:bg-gray-300 hover:text-[#023047]"
-              >
+                className="w-[90%] mx-auto bg-[#023047] hover:bg-gray-300 hover:text-[#023047]">
                 LOG IN
               </Button>
             </CardFooter>
@@ -148,8 +146,7 @@ const LoginForm = () => {
                     <Button
                       variant="link"
                       disabled={true}
-                      className="text-white"
-                    >
+                      className="text-white">
                       Forgot Password
                     </Button>
                   </DialogTrigger>
@@ -171,8 +168,7 @@ const LoginForm = () => {
               <Button
                 disabled={true}
                 variant="outline"
-                className=" w-[80%] mx-auto"
-              >
+                className=" w-[80%] mx-auto">
                 {/* <Github color="#000000" /> */}
                 Login with Google
               </Button>
