@@ -8,7 +8,7 @@ export default defineConfig({
     port: 4001,
     proxy: {
       "/api": {
-        target: "https://print-saathi-backend-c3f95afc5a9f.herokuapp.com", // Your API server
+        target: "https://neartocollege-backend-5984b8127320.herokuapp.com", // Your API server
         changeOrigin: true,
         configure: (proxy, options) => {
           proxy.on("proxyRes", (proxyRes, req, res) => {
