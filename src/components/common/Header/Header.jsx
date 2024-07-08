@@ -92,7 +92,9 @@ const Header = () => {
   const logoutHandler = async () => {
     setLoading(true);
     try {
-      await axios.post("/api/v1/users/logout");
+      await axios.post(
+        "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/logout"
+      );
       dispatch(logout());
       setLoading(false);
       Swal.fire("Logout Successfully", "", "success");

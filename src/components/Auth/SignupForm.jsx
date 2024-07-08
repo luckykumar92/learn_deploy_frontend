@@ -55,7 +55,10 @@ const SignupForm = () => {
     }
 
     try {
-      const userData = await axios.post("/api/v1/users/register", data);
+      const userData = await axios.post(
+        "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/register",
+        data
+      );
       if (userData) {
         console.log(userData.data.data.phone);
         setLoading(false);

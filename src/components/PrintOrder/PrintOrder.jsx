@@ -47,7 +47,10 @@ const PrintOrder = () => {
     setDialogOpen(true);
     setLoading(true);
     try {
-      const orderResponse = await axios.post("/api/v1/prints/printorder", data);
+      const orderResponse = await axios.post(
+        "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/prints/printorder",
+        data
+      );
       if (orderResponse) {
         setLoading(false);
       }

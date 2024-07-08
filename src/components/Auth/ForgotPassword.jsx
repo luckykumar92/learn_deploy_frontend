@@ -31,7 +31,10 @@ const ForgotPassword = () => {
     console.log(data);
     setError("");
     try {
-      const responseData = await axios.post("/api/v1/users/fpmail", data);
+      const responseData = await axios.post(
+        "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/fpmail",
+        data
+      );
       // console.log(responseData.data.message);
       setLoading(false);
       setEmail(data.email);

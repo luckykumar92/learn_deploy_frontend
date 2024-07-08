@@ -29,7 +29,9 @@ const IsVerified = () => {
 
   useEffect(() => {
     axios
-      .get(`/api/v1/users/getuserdetail?id=${id}`)
+      .get(
+        `https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/getuserdetail?id=${id}`
+      )
       .then((fetchData) => {
         if (fetchData) {
           const data = fetchData.data.data;
@@ -46,10 +48,13 @@ const IsVerified = () => {
   //   console.log(userData, "1");
   const handleVerify = async () => {
     try {
-      const res = await axios.post(`/api/v1/users/verifyemail`, {
-        _id: id,
-        isVerified: true,
-      });
+      const res = await axios.post(
+        `https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/verifyemail`,
+        {
+          _id: id,
+          isVerified: true,
+        }
+      );
       if (res) {
         console.log(res);
         const data = res.data.data;
@@ -61,7 +66,7 @@ const IsVerified = () => {
       }
     } catch (error) {
       // setLoading(false);
-      setError(error.response.data.message);
+      // setError(error.response.data.message);
     }
   };
 
@@ -96,8 +101,7 @@ const IsVerified = () => {
                 <div className="mt-4">
                   <Button
                     onClick={handleVerify}
-                    className="px-2 py-2 dark:text-black text-white"
-                  >
+                    className="px-2 py-2 dark:text-black text-white">
                     Click to Verify Email
                   </Button>
                   {/* <p class="mt-4 text-sm">

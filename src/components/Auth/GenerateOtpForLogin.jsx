@@ -24,7 +24,7 @@ const GenerateOtpForLogin = () => {
     // console.log(data);
     try {
       const responseData = await axios.post(
-        "/api/v1/users/generate-otp-for-login",
+        "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/generate-otp-for-login",
         data
       );
       //  console.log(responseData.data);

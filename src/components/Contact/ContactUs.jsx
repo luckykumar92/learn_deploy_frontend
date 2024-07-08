@@ -16,7 +16,10 @@ const ContactUs = () => {
     // console.log(data);
     setLoading(true);
     try {
-      const response = await axios.post("/api/v1/users/contactus", data);
+      const response = await axios.post(
+        "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/contactus",
+        data
+      );
       if (response.data.success == true) {
         setLoading(false);
         Swal.fire(

@@ -40,9 +40,13 @@ const ForgotPasswordChange = () => {
       // console.log(data);
       setError("");
       try {
-        const session = await axios.post("/api/v1/users/forgotpassword", data, {
-          _id: id,
-        });
+        const session = await axios.post(
+          "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/users/forgotpassword",
+          data,
+          {
+            _id: id,
+          }
+        );
         // console.log(session.data.message);
         if (session) {
           setLoading(false);

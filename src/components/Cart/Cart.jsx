@@ -35,10 +35,13 @@ const Cart = () => {
     };
     setLoading(true);
     try {
-      const orderResponse = await axios.post("/api/v1/prints/printorder", {
-        orderData: orderData,
-        orderValue: orderValue,
-      });
+      const orderResponse = await axios.post(
+        "https://neartocollege-backend-5984b8127320.herokuapp.com/api/v1/prints/printorder",
+        {
+          orderData: orderData,
+          orderValue: orderValue,
+        }
+      );
       if (orderResponse) {
         setLoading(false);
         Swal.fire(
